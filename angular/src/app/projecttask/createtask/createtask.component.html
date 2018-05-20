@@ -1,0 +1,80 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >  
+<div class="form-horizontal">    
+<h4>Create Tasks</h4>   
+ <hr />
+
+   
+  <div class="form-group">
+      <label class="control-label col-md-2" for="assignedto">Assigned To</label> 
+     <div class="col-md-10">    
+    <input class="form-control text-box single-line" formControlName="assignedto" type="text" value="" /> 
+       <div *ngIf="formData.controls.assignedto.errors && (formData.controls.assignedto.dirty || formData.assignedto.clientname.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.assignedto.errors.required">
+                Assignedto is required
+           </div> 
+         </div>  
+    </div>
+    </div>
+ 
+
+ <div class="form-group"> 
+     <label class="control-label col-md-2" for="userstoryid">UserStoryId</label>  
+    <div class="col-md-10">  
+      <input class="form-control text-box single-line" formControlName="userstoryid" type="text" value="" /> 
+       <div *ngIf="formData.controls.userstoryid.errors && (formData.controls.userstoryid.dirty || formData.controls.userstoryid.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.userstoryid.errors.required">
+                User StoryId is required
+            </div> 
+       </div> 
+     </div>    
+</div>
+
+<div class="form-group">
+  <label class="control-label col-md-2" for="tstartdate">Start Date</label> 
+ <div class="col-md-10"> 
+   <input class="form-control text-box single-line" formControlName="tstartdate" type="text" value="" /> 
+   <div *ngIf="formData.controls.tstartdate.errors && (formData.controls.tstartdate.dirty || formData.controls.tstartdate.touched)" class="alert-danger" >
+      <div *ngIf="formData.controls.tstartdate.errors.required"> 
+       Date is required
+      </div>
+      </div>    
+</div>    
+</div>
+
+ <div class="form-group">
+      <label class="control-label col-md-2" for="tenddate">End Date</label> 
+     <div class="col-md-10"> 
+       <input class="form-control text-box single-line" formControlName="tenddate" type="text" value="" /> 
+       <div *ngIf="formData.controls.tenddate.errors && (formData.controls.tenddate.dirty || formData.controls.tenddate.touched)" class="alert-danger" >
+          <div *ngIf="formData.controls.tenddate.errors.required"> 
+           Date is required
+          </div>          
+        </div>    
+  </div>    
+</div>
+
+<div class="form-group">
+  <label class="control-label col-md-2" for="tcompletion">Completion Date</label> 
+ <div class="col-md-10"> 
+   <input class="form-control text-box single-line" formControlName="tcompletion" type="text" value="" /> 
+   <div *ngIf="formData.controls.tcompletion.errors && (formData.controls.tcompletion.dirty || formData.controls.tcompletion.touched)" class="alert-danger" >
+      <div *ngIf="formData.controls.tcompletion.errors.required"> 
+      Date is required
+      </div>          
+    </div>    
+</div>    
+</div>  
+
+<div class="form-group"> 
+     <div class="col-md-offset-2 col-md-10"> 
+       <input type="submit" value="Create" class="btn btn-default" [disabled]="!formData.valid" /> 
+     </div>
+    </div>  
+</div>
+</form>
+
+<div>  
+<a href="/task/show">Back to List</a>
+</div>

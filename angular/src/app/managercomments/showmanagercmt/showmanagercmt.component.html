@@ -1,0 +1,31 @@
+
+<h1>Manager Commission List</h1>
+<br>
+<p>
+    <a href="/manager/create">Create</a>
+    </p>
+<table class="table">
+    <tr>
+        <th>Manage Commission</th>
+        <th>Comments</th>
+        <th>Task Id</th>
+        <th>Actions</th>
+    </tr>
+   
+    <tr *ngFor="let emp of mgrcmt">
+    
+       <td>{{emp.mgrid}}</td>
+       <td>{{emp.comments}}</td>
+       <td>{{emp.taskid}}</td>
+       <td>
+
+        <a href="/manager/edit/{{emp.mgrid}}">Edit/</a>
+
+        <a href="/manager/delete/{{emp.mgrid}}">Delete</a>
+
+      </td>
+
+
+    </tr>
+</table>
+<br>

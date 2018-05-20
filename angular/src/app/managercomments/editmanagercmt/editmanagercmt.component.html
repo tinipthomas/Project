@@ -1,0 +1,63 @@
+<br>
+<br>
+
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+  <div class="form-horizontal">
+    <h4>Edit Manager Comments</h4> 
+   <hr />
+
+
+    <div class="form-group"> 
+     <label class="control-label col-md-2" for="mgrid">Manage Commission</label> 
+     <div class="col-md-10">
+        <input class="form-control text-box single-line" formControlName="mgrid"  type="text" value="" />
+        <div *ngIf="formData.controls.mgrid.errors && (formData.controls.mgrid.dirty || formData.controls.mgrid.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.mgrid.errors.required">
+            Commission is required
+           </div> 
+         </div>
+      </div>
+    </div>
+
+ 
+
+   <div class="form-group">
+      <label class="control-label col-md-2" for="comments">Comments</label>
+      <div class="col-md-10">
+        <input class="form-control text-box single-line" formControlName="comments" type="text" value="" />
+        <div *ngIf="formData.controls.comments.errors && (formData.controls.comments.dirty || formData.controls.comments.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.comments.errors.required">
+                Comments is required
+            </div>
+          </div>
+      </div>
+    </div>
+
+
+
+    <div class="form-group"> 
+     <label class="control-label col-md-2" for="taskid">Task Id</label> 
+     <div class="col-md-10">  
+      <input class="form-control text-box single-line" data-val="true"
+            formControlName="contactno" name="taskid" type="text" value="" /> 
+       <div *ngIf="formData.controls.taskid.errors && (formData.controls.taskid.dirty || formData.controls.taskid.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.taskid.errors.required">
+                Id is required
+            </div>
+          </div>
+      </div>
+    </div>
+
+   
+  <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">  
+      <input type="submit" value="Edit" class="btn btn-default" [disabled]="!formData.value" />
+      </div>
+   </div>
+
+  </div>
+</form>
+
+<div>
+  <a href="/manager/show">Back to List</a>
+</div>

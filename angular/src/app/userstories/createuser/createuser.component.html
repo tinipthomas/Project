@@ -1,0 +1,46 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >  
+<div class="form-horizontal">    
+<h4>Create User</h4>   
+ <hr />
+
+   
+ <div class="form-group">    
+  <label class="control-label col-md-2" for="proid">Project ID</label>  
+    <div class="col-md-10">     
+   <input class="form-control text-box single-line"  formControlName="protaskid" type="text" value="" />
+       <div *ngIf="formData.controls.proid.errors && (formData.controls.proid.dirty || formData.controls.proid.touched)" class="alert-danger" >
+           <div *ngIf="formData.controls.proid.errors.required">
+            ID is required
+        </div>
+      </div>
+    </div>
+ </div>
+
+   
+
+ <div class="form-group">
+      <label class="control-label col-md-2" for="story">Story</label> 
+     <div class="col-md-10">    
+    <input class="form-control text-box single-line" formControlName="story" type="text" value="" /> 
+       <div *ngIf="formData.controls.story.errors && (formData.controls.story.dirty || formData.story.clientname.touched)" class="alert-danger" >
+            <div *ngIf="formData.controls.story.errors.required">
+                Story is required
+           </div> 
+         </div>  
+    </div>
+    </div>
+ 
+<div class="form-group"> 
+     <div class="col-md-offset-2 col-md-10"> 
+       <input type="submit" value="Create" class="btn btn-default" [disabled]="!formData.valid" /> 
+     </div>
+    </div>  
+</div>
+</form>
+
+<div>  
+<a href="/user/show">Back to List</a>
+</div>
+

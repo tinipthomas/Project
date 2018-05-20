@@ -1,0 +1,72 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+  <div class="form-horizontal">
+    <h4>Delete Tasks</h4>
+    <hr />
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="protaskid">Task Id</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="protaskid">{{task.protaskid}}</label>
+      </div>
+    </div>
+
+ 
+
+   <div class="form-group">
+      <label class="control-label col-md-2" for="assignedto">Assigned To</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="assignedto">{{task.assignedto}}</label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="userstoryid">Userstory Id</label>
+      <div class="col-md-10">
+              <label class="control-label col-md-2" for="userstoryid">{{task.userstoryid}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="tstartdate">Start Date</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="tstartdate">{{task.tstartdate}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="tenddate">End Date</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="tenddate">{{task.tenddate}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="tcompletion">Completion Date</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="tcompletion">{{task.tcompletion}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Delete" class="btn btn-default" />
+      </div>
+    </div>
+
+  </div>
+
+</form>
+<div>
+  <a href="/projecttask/show">Back to List</a>
+</div>

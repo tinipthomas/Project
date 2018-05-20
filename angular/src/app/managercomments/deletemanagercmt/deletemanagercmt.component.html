@@ -1,0 +1,43 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+  <div class="form-horizontal">
+    <h4>Delete Manager Comments</h4>
+    <hr />
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="mgrid">Manager Commission</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="mgrid">{{project.mgrid}}</label>
+      </div>
+    </div>
+
+ 
+
+   <div class="form-group">
+      <label class="control-label col-md-2" for="comments">Comments</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="comments">{{project.comments}}</label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="taskid">Task Id</label>
+      <div class="col-md-10">
+              <label class="control-label col-md-2" for="taskid">{{project.taskid}}</label>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Delete" class="btn btn-default" />
+      </div>
+    </div>
+
+  </div>
+
+</form>
+<div>
+  <a href="/manager/show">Back to List</a>
+</div>

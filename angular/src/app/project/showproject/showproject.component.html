@@ -1,0 +1,36 @@
+<h1>Project List</h1>
+<br>
+<p>
+    <a href="/project/create">Create</a>
+    </p>
+<table class="table">
+    <tr>
+        <th>Project Id</th>
+        <th>Project Name</th>
+        <th>Client Name</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Actions</th>
+        
+
+    </tr>
+   
+    <tr *ngFor="let emp of projects">
+    
+       <td>{{emp.proid}}</td>
+       <td>{{emp.proname}}</td>
+       <td>{{emp.clientname}}</td>
+       <td>{{emp.startdate}}</td>
+       <td>{{emp.enddate}}</td>
+       <td>
+
+        <a href="/project/edit/{{emp.proid}}">Edit/</a>
+
+        <a href="/project/delete/{{emp.proid}}">Delete</a>
+
+      </td>
+
+
+    </tr>
+</table>
+<br>

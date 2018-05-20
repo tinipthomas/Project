@@ -1,0 +1,62 @@
+<br>
+<br>
+<form [formGroup]="formData" (ngSubmit)="onClickSubmit(formData.value)" >
+  <div class="form-horizontal">
+    <h4>Delete Projects</h4>
+    <hr />
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="proid">Project Id</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="proid">{{project.proid}}</label>
+      </div>
+    </div>
+
+ 
+
+   <div class="form-group">
+      <label class="control-label col-md-2" for="proname">Project Name</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="proname">{{project.proname}}</label>
+      </div>
+    </div>
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="clientname">Client Name</label>
+      <div class="col-md-10">
+              <label class="control-label col-md-2" for="clientname">{{project.clientname}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="startdate">Start Date</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="startdate">{{project.startdate}}</label>
+      </div>
+    </div>
+
+
+
+    <div class="form-group">
+      <label class="control-label col-md-2" for="enddate">End Date</label>
+      <div class="col-md-10">
+        <label class="control-label col-md-2" for="enddate">{{project.enddate}}</label>
+      </div>
+    </div>
+
+    
+    <div class="form-group">
+      <div class="col-md-offset-2 col-md-10">
+        <input type="submit" value="Delete" class="btn btn-default" />
+      </div>
+    </div>
+
+  </div>
+
+</form>
+<div>
+  <a href="/project/show">Back to List</a>
+</div>
